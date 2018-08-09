@@ -28,4 +28,8 @@ public class ThirdActivity extends AppCompatActivity {
     private void master() {
         System.out.println("master");
     }
+
+    private void version() {
+        System.out.println("master-version1");
+    }
 }
