@@ -23,14 +23,4 @@ public class ThirdActivity extends AppCompatActivity {
             }
         });
     }
-
-    private void masterRebase() {
-        System.out.println("master rebase");
-    }
-
-    private void versionMaster() {
-        System.out.println("11111");
-        System.out.println("333333");
-        System.out.println("5555");
-    }
 }
