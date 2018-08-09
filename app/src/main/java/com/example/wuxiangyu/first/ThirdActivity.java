@@ -23,4 +23,8 @@ public class ThirdActivity extends AppCompatActivity {
             }
         });
     }
+
+    private void version() {
+        System.out.println("version1");
+    }
 }
