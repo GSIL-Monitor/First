@@ -25,4 +25,7 @@ public class ThirdActivity extends AppCompatActivity {
     }
 
 
+    public void method() {
+        //master commit2;
+    }
 }
