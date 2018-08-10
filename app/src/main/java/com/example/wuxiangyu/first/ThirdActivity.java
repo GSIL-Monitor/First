@@ -26,6 +26,7 @@ public class ThirdActivity extends AppCompatActivity {
 
 
     public void method() {
-        //master commit2;
+        //version1 commit1;
+        //        //master commit2;
     }
 }
