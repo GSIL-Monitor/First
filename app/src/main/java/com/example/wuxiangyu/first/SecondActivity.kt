@@ -25,4 +25,7 @@ class SecondActivity : AppCompatActivity() {
             activity.startActivity(intent)
         }
     }
+    fun test() {
+        //master commit3
+    }
 }
