@@ -24,5 +24,7 @@ public class ThirdActivity extends AppCompatActivity {
         });
     }
 
-
+    void test() {
+        //master commiter3
+    }
 }
