@@ -26,6 +26,6 @@ class SecondActivity : AppCompatActivity() {
         }
     }
     fun test() {
-        //commit master1
+        //commit master3
     }
 }
