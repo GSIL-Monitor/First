@@ -17,8 +17,6 @@ class MainActivity : AppCompatActivity() {
         var tv = findViewById<TextView>(R.id.tvHeight)
         button.setOnClickListener {
 //            SecondActivity.launch(this@MainActivity)
-            Log.e("cc", "成" + tv.height)
-            Log.e("cc", "top" + button.height)
             tv.startAnimation(AnimationUtils.loadAnimation(this@MainActivity, R.anim.lyric_scale))
         }
 
