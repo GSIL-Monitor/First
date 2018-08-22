@@ -33,6 +33,7 @@ class UserProfileFragment: Fragment() {
         viewModel = UserProfileViewModel()
         viewModel.user?.observe(this, Observer<User> {
             //todo
+
         })
     }
 

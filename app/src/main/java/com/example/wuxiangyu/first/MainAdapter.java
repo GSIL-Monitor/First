@@ -64,6 +64,10 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>{
         return temp == null ? 0 : temp.size();
     }
 
+    public void removeIndex(int index) {
+        temp.remove(index);
+    }
+
     static class ViewHolder extends RecyclerView.ViewHolder {
         TextView tvCongent;
         Button btnBefore;
