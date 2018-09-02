@@ -1,0 +1,12 @@
+<resources>
+    <style name="AppTheme.Night">
+        <item name="text_drawable">@drawable/album_more_intro</item>
+    </style>
+
+    <style name="AppTheme.Day">
+        <item name="text_bg">@color/text_bg</item>
+        <item name="button_bg">@color/button_bg</item>
+        <item name="text_color">@color/text_color</item>
+        <item name="text_drawable">@drawable/ic_launcher</item>
+    </style>
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical">
+
+<TextView
+    android:id="@+id/tvContent"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/text_bg"
+    android:text="wuxiangyu"
+    android:gravity="center"
+    android:textColor="@color/text_color"
+    android:textSize="20dp"/>
+<Button
+    android:id="@+id/btnClick"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/button_bg"
+    android:text="click to Next"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="wuxiangtu"
+        android:gravity="center"
+        android:textSize="25dp"/>
+    <ImageView
+        android:id="@+id/ivColorFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/comment_no_comment"/>
+</LinearLayout>
