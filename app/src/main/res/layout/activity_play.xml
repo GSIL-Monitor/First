@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:id="@+id/llTools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:layout_marginBottom="18dp"
+        android:background="#000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/ivPlayingPlay"
+            android:src="@drawable/playing_playing_icon_play"
+            android:layout_centerInParent="true"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="47dp"
+            android:layout_marginRight="47dp"
+            />
+
+        <ImageView
+            android:id="@+id/pbPlayLoading"
+            android:layout_centerInParent="true"
+            android:src="@drawable/play_loading_icon"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:id="@+id/ivPlayingPrev"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/ivPlayingPlay"
+            android:clickable="true"
+            android:src="@drawable/playing_control_icon_playing_prev"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            />
+
+        <ImageView
+            android:id="@+id/ivPlayingMode"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/ivPlayingPrev"
+            android:clickable="true"
+            android:src="@drawable/playing_control_icon_loop_mode_list"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="40dp"
+            />
+
+
+        <ImageView
+            android:id="@+id/ivPlayingNext"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/ivPlayingPlay"
+            android:clickable="true"
+            android:src="@drawable/playing_control_icon_playing_next"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            />
+
+        <ImageView
+            android:id="@+id/ivPlayingList"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/ivPlayingNext"
+            android:src="@drawable/playing_playing_list_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="40dp" />
+    </RelativeLayout>
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/llTools"
+        android:layout_marginTop="50dp"/>
+
+    <Button
+        android:id="@+id/btnStartService"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="start service"/>
+    <Button
+        android:id="@+id/btnStopService"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="stop service"
+        app:layout_constraintTop_toBottomOf="@id/btnStartService"/>
+
+    <Button
+        android:id="@+id/btnBindService"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="bind service"
+        app:layout_constraintTop_toBottomOf="@id/btnStopService"/>
+
+    <Button
+        android:id="@+id/btnUnbindService"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="unbind service"
+        app:layout_constraintTop_toBottomOf="@id/btnBindService"/>
+
+</android.support.constraint.ConstraintLayout>

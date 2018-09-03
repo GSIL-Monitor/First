@@ -10,10 +10,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.wuxiangyu.first.R;
+import com.example.wuxiangyu.music.PlayActivity;
 
 public class DaynightMainActivity extends BaseActivity implements View.OnClickListener {
     private TextView mTvContent;
     private Button mBtnClick;
+    private Button btnPlay;
     ImageView ivColorFilter;
 
     @Override
@@ -28,10 +30,17 @@ public class DaynightMainActivity extends BaseActivity implements View.OnClickLi
         mBtnClick = (Button) findViewById(R.id.btnClick);
         mBtnClick.setOnClickListener(this);
         ivColorFilter = findViewById(R.id.ivColorFilter);
+        btnPlay = findViewById(R.id.btnPlay);
         ivColorFilter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 changeColorFilter();
+            }
+        });
+        btnPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PlayActivity.Companion.launch(DaynightMainActivity.this);
             }
         });
     }

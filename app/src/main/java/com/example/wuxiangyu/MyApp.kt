@@ -5,9 +5,11 @@ import android.support.v7.app.AppCompatDelegate
 import com.example.wuxiangyu.daynight.SpUtils
 
 class MyApp : Application() {
+    init {
+        instance = this
+    }
     override fun onCreate() {
         super.onCreate()
-        instance = this
         initDarkTheme()
     }
     private fun initDarkTheme() {
@@ -20,7 +22,6 @@ class MyApp : Application() {
     }
 
     companion object {
-        var instance: MyApp? = null
-            private set
+        lateinit var instance: MyApp
     }
 }

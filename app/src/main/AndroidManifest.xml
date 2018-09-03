@@ -28,6 +28,8 @@
         </activity>
         <activity android:name="com.example.wuxiangyu.daynight.DaynightSecondActivity">
         </activity>
+        <activity android:name="com.example.wuxiangyu.music.PlayActivity"/>
+        <service android:name="com.example.wuxiangyu.music.PlayerService"/>
     </application>
 
 </manifest>
