@@ -164,6 +164,11 @@ public class LyricView extends View {
         mNextHeight = nextStatic.getHeight();
         canvas.translate(0, refrenceLineTop - mPercent * mNextHeight * MAX_SCALE + paddingBetweenCurrentToNext * (1 - mPercent));
         canvas.scale(currentScale, currentScale, 0, 0);
+        int count = nextStatic.getLineCount();
+        int a = nextStatic.getLineStart(1);
+        int b = nextStatic.getLineStart(2);
+        Log.e("xxxx", "a: " + a + "; b: " + b + "; content: " + strNext.substring(a, b));
+
         nextStatic.draw(canvas);
         canvas.restore();
 

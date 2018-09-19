@@ -15,21 +15,25 @@
         </activity>
         <activity android:name=".SecondActivity"/>
         <activity android:name=".ThirdActivity">
-        </activity>
-        <activity android:name="com.example.wuxiangyu.arch.MainActivity">
-        </activity>
-        <activity android:name="com.example.wuxiangyu.daynight.DaynightMainActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.example.wuxiangyu.arch.MainActivity">
+        </activity>
+        <activity android:name="com.example.wuxiangyu.daynight.DaynightMainActivity">
+
+        </activity>
         <activity android:name="com.example.wuxiangyu.daynight.DaynightSecondActivity">
         </activity>
         <activity android:name="com.example.wuxiangyu.music.PlayActivity"/>
         <service android:name="com.example.wuxiangyu.music.PlayerService"/>
+        <activity android:name="com.example.wuxiangyu.removeservice.ControlServiceActivity">
+        </activity>
+        <service android:name="com.example.wuxiangyu.removeservice.RemoteService"
+            android:process=":remote"/>
     </application>
 
 </manifest>

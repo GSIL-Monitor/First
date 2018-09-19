@@ -4,6 +4,7 @@ import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -30,6 +31,7 @@ public class DaynightMainActivity extends BaseActivity implements View.OnClickLi
         mBtnClick = (Button) findViewById(R.id.btnClick);
         mBtnClick.setOnClickListener(this);
         ivColorFilter = findViewById(R.id.ivColorFilter);
+        ivColorFilter.setVisibility(View.INVISIBLE);
         btnPlay = findViewById(R.id.btnPlay);
         ivColorFilter.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +45,12 @@ public class DaynightMainActivity extends BaseActivity implements View.OnClickLi
                 PlayActivity.Companion.launch(DaynightMainActivity.this);
             }
         });
+        ivColorFilter.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Log.e("xxxx", "height: " + ivColorFilter.getHeight());
+            }
+        }, 2000);
     }
 
     private void changeColorFilter() {
