@@ -21,9 +21,16 @@
         <action
             android:id="@+id/action_secondFragment_to_navigationSecondActivity"
             app:destination="@id/navigationSecondActivity" />
+        <action
+            android:id="@+id/action_secondFragment_to_login_graph"
+            app:destination="@id/login_graph" />
     </fragment>
     <activity
         android:id="@+id/navigationSecondActivity"
         android:name="com.example.wuxiangyu.navi.NavigationSecondActivity"
         android:label="NavigationSecondActivity" />
+
+
+
+    <include app:graph="@navigation/login_graph" />
 </navigation>

@@ -17,6 +17,7 @@ private const val ARG_PARAM2 = "param2"
 
 class SecondFragment : Fragment() {
     private lateinit var tvNextActivity: TextView
+    private lateinit var tvNextGraph: TextView
     private var param1: String? = null
     private var param2: String? = null
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -26,6 +27,10 @@ class SecondFragment : Fragment() {
         tvNextActivity.setOnClickListener {
             //todo
             Navigation.findNavController(view).navigate(R.id.action_secondFragment_to_navigationSecondActivity, null);
+        }
+        tvNextGraph = view.findViewById(R.id.tvNextGraph)
+        tvNextGraph.setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_secondFragment_to_login_graph, null);
         }
         return view
     }
