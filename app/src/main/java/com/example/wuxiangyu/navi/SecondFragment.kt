@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.navigation.Navigation
 import com.example.wuxiangyu.first.R
@@ -16,8 +17,8 @@ private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 class SecondFragment : Fragment() {
-    private lateinit var tvNextActivity: TextView
-    private lateinit var tvNextGraph: TextView
+    private lateinit var tvNextActivity: Button
+    private lateinit var tvNextGraph: Button
     private var param1: String? = null
     private var param2: String? = null
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,

@@ -30,7 +30,5 @@
         android:name="com.example.wuxiangyu.navi.NavigationSecondActivity"
         android:label="NavigationSecondActivity" />
 
-
-
     <include app:graph="@navigation/login_graph" />
 </navigation>

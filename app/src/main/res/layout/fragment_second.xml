@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.wuxiangyu.navi.StartFragment">
+    tools:context="com.example.wuxiangyu.navi.StartFragment"
+    android:orientation="vertical">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <Button
         android:id="@+id/tvNextActivity"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="next activity"
+        android:text="go to NavigationSecondActivity"
         android:gravity="center"/>
-    <TextView
+    <Button
         android:id="@+id/tvNextGraph"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="next graph"
-        android:gravity="center"
-        android:layout_marginTop="50dp"/>
+        android:text="nested graph: login"
+        android:gravity="center"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="SecondFragment"
+        android:gravity="center"/>
 
-</FrameLayout>
+</LinearLayout>

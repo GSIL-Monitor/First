@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.wuxiangyu.navi.StartFragment">
+    tools:context="com.example.wuxiangyu.navi.StartFragment"
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
+    <Button
+        android:id="@+id/btnDeeplink"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="deep link"/>
+
     <TextView
         android:id="@+id/tvNextFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="50dp"
         android:text="next fragment"
+        android:gravity="center"
+        android:background="#ff0000"/>
+    <TextView
+        android:text="this is StartFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:gravity="center"/>
-
-</FrameLayout>
+</LinearLayout>
