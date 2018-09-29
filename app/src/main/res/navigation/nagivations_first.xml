@@ -18,6 +18,9 @@
         android:id="@+id/navigationsFirstSubAFragment"
         android:name="com.example.wuxiangyu.navisecond.first.NavigationsFirstSubAFragment"
         android:label="NavigationsFirstSubAFragment" >
+        <argument
+            android:name="myarg"
+            android:defaultValue="Android!"/>
         <action
             android:id="@+id/action_navigationsFirstSubAFragment_to_navigationsSecondActivity"
             app:destination="@id/navigationsSecondActivity" />

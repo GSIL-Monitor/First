@@ -25,5 +25,10 @@ class NavigationsFirstSubAFragment : BaseFragment() {
         btnSecondNavigations.setOnClickListener{
             navController?.navigate(R.id.action_navigationsFirstSubAFragment_to_navigationsSecondActivity)
         }
+        arguments?.let {
+            val argumentFromNavigationXml = it.getString("myarg")
+            tvFirst.text = argumentFromNavigationXml
+        }
+
     }
 }
