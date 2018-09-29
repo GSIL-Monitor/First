@@ -65,12 +65,12 @@ class NavigationsActivity : AppCompatActivity() {
     }
 
     private fun changeHostFragment(itemId: Int) {
-        var navId: Int
+        var navId =
         when (itemId) {
-            R.id.firstFragment -> navId = R.navigation.nagivations_first
-            R.id.secondFragment -> navId = R.navigation.nagivations_second
-            R.id.thirdFragment -> navId = R.navigation.nagivations_third
-            else -> navId = R.navigation.nagivations_default
+            R.id.firstFragment -> R.navigation.nagivations_first
+            R.id.secondFragment ->  R.navigation.nagivations_second
+            R.id.thirdFragment -> R.navigation.nagivations_third
+            else -> R.navigation.nagivations_default
         }
         val navHostFragment = navigationUtils.getNavHostFragment(navId)
         val ft = supportFragmentManager.beginTransaction()

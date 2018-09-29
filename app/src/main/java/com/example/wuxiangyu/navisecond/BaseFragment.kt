@@ -5,10 +5,12 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
 import com.example.wuxiangyu.Logger
 
-open class BaseFragment: Fragment() {
-    val TAG = this.javaClass.simpleName?: "BaseFragment"
+open class BaseFragment : Fragment() {
+    val TAG = this.javaClass.simpleName ?: "BaseFragment"
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         Logger.i(TAG, "onCreateView")
         return super.onCreateView(inflater, container, savedInstanceState)
@@ -43,4 +45,14 @@ open class BaseFragment: Fragment() {
         Logger.i(TAG, "onDestroy")
         super.onDestroy()
     }
+
+    protected var navController: NavController? = null
+        get() {
+            return try {
+                val fragment = this.parentFragment as NavHostFragment
+                fragment.navController
+            } catch (e: Exception) {
+                null
+            }
+        }
 }

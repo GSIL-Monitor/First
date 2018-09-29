@@ -11,6 +11,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.navigation.Navigation
 import com.example.wuxiangyu.first.R
+import com.example.wuxiangyu.navisecond.BaseFragment
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -27,7 +28,7 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  *
  */
-class StartFragment : Fragment() {
+class StartFragment : BaseFragment() {
     private lateinit var tvNextFragment: TextView
     private lateinit var btnDeeplink: Button
     private var param1: String? = null
@@ -39,7 +40,7 @@ class StartFragment : Fragment() {
         btnDeeplink = view.findViewById(R.id.btnDeeplink)
                 tvNextFragment.setOnClickListener{
                     //todo
-                    Navigation.findNavController(view).navigate(R.id.action_startFragment_to_secondFragment, null);
+                    navController?.navigate(R.id.action_startFragment_to_secondFragment, null);
                 }
         btnDeeplink.setOnClickListener{view ->
 

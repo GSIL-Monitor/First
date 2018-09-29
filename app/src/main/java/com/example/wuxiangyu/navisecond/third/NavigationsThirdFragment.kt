@@ -24,7 +24,7 @@ class NavigationsThirdFragment : BaseFragment() {
         tvFirst = view.findViewById(R.id.tvFirst)
         btnGoSubA = view.findViewById(R.id.btnGoSubA)
         btnGoSubA.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_navigationsThirdFragment_to_navigationsThirdSubAFragment)
+            navController?.navigate(R.id.action_navigationsThirdFragment_to_navigationsThirdSubAFragment)
         }
     }
 }
