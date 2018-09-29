@@ -36,5 +36,8 @@
     <activity
         android:id="@+id/navigationsSecondActivity"
         android:name="com.example.wuxiangyu.navisecond.NavigationsSecondActivity"
-        android:label="NavigationsSecondActivity" />
+        android:label="NavigationsSecondActivity" >
+        <deepLink
+            app:uri="seu://seu.com/navigationssecond"/>
+    </activity>
 </navigation>

@@ -16,6 +16,7 @@ class NavigationsFirstFragment : BaseFragment() {
     lateinit var btnGoSubA: Button
     lateinit var btnSecondSubA: Button
     lateinit var btnDeeplink: Button
+    lateinit var btnDeeplinkActivity: Button
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_navigations_first, container, false)
         initView(view)
@@ -28,12 +29,15 @@ class NavigationsFirstFragment : BaseFragment() {
         btnGoSubA = view.findViewById(R.id.btnGoSubA)
         btnSecondSubA = view.findViewById(R.id.btnSecondSubA)
         btnDeeplink = view.findViewById(R.id.btnDeeplink)
+        btnDeeplinkActivity = view.findViewById(R.id.btnDeeplinkActivity)
         btnGoSubA.setOnClickListener{
+            //deeplink和action可以二选一，所以有deeplink，可以不需要有action
             navController?.navigate(R.id.action_navigationsFirstFragment_to_navigationsFirstSubAFragment)
         }
         btnSecondSubA.setOnClickListener{
             navController?.navigate(R.id.action_navigationsFirstFragment_to_navigationsSecondSubAFragment)
         }
+        //deeplink跳到 本navigation内的 activity
         btnDeeplink.setOnClickListener{
             //deeplink来跳转
 //            navController?.navigate(R.id.action_navigationsFirstFragment_to_navigationsSecondSubAFragment)
@@ -52,6 +56,13 @@ class NavigationsFirstFragment : BaseFragment() {
             这个是操作不了的，因为该deeplink不做当前controller中
              */
 //            intent.data = Uri.parse("seu://seu.com/secondsub")
+            navController?.onHandleDeepLink(intent)
+        }
+
+        //deeplink跳到本navigation内的NavigationsSecondActivity
+        btnDeeplinkActivity.setOnClickListener{
+            val intent = Intent()
+            intent.data = Uri.parse("seu://seu.com/navigationssecond")
             navController?.onHandleDeepLink(intent)
         }
     }
