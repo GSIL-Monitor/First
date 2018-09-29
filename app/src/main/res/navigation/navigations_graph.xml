@@ -8,21 +8,12 @@
         android:id="@+id/firstFragment"
         android:name="com.example.wuxiangyu.navisecond.NavigationsFirstFragment"
         android:label="FirstFragment" >
-        <action
-            android:id="@+id/action_firstFragment_to_secondFragment"
-            app:destination="@id/secondFragment" />
-        <action
-            android:id="@+id/action_firstFragment_to_thirdFragment"
-            app:destination="@id/thirdFragment" />
     </fragment>
     
     <fragment
         android:id="@+id/secondFragment"
         android:name="com.example.wuxiangyu.navisecond.NavigationsSecondFragment"
         android:label="SecondFragment" >
-        <action
-            android:id="@+id/action_secondFragment_to_thirdFragment"
-            app:destination="@id/thirdFragment" />
     </fragment>
 
     <fragment
