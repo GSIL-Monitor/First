@@ -63,6 +63,14 @@ class NavigationsFirstFragment : BaseFragment() {
         btnDeeplinkActivity.setOnClickListener{
             val intent = Intent()
             intent.data = Uri.parse("seu://seu.com/navigationssecond")
+            val bundle = Bundle()
+
+            val extraBundle = Bundle()
+            extraBundle.putString("myargs", "haha")
+//            intent.putExtra("myargs", "haha")
+            bundle.putBundle("android-support-nav:controller:deepLinkExtras", extraBundle)
+
+            intent.putExtras(bundle)
             navController?.onHandleDeepLink(intent)
         }
     }
