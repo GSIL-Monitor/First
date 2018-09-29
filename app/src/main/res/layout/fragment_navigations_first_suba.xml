@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
         android:id="@+id/tvFirst"
@@ -9,4 +10,10 @@
         android:layout_height="match_parent"
         android:text="first fragment, sub a"
         android:gravity="center"/>
+    <Button
+        android:id="@+id/btnSecondNavigations"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="go Second Navigations"
+        app:layout_constraintTop_toBottomOf="@id/btnSecondSubA"/>
 </android.support.constraint.ConstraintLayout>

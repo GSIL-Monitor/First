@@ -17,9 +17,17 @@
     <fragment
         android:id="@+id/navigationsFirstSubAFragment"
         android:name="com.example.wuxiangyu.navisecond.first.NavigationsFirstSubAFragment"
-        android:label="NavigationsFirstSubAFragment" />
+        android:label="NavigationsFirstSubAFragment" >
+        <action
+            android:id="@+id/action_navigationsFirstSubAFragment_to_navigationsSecondActivity"
+            app:destination="@id/navigationsSecondActivity" />
+    </fragment>
     <fragment
         android:id="@+id/navigationsSecondSubAFragment"
         android:name="com.example.wuxiangyu.navisecond.second.NavigationsSecondSubAFragment"
         android:label="NavigationsSecondSubAFragment" />
+    <activity
+        android:id="@+id/navigationsSecondActivity"
+        android:name="com.example.wuxiangyu.navisecond.NavigationsSecondActivity"
+        android:label="NavigationsSecondActivity" />
 </navigation>
