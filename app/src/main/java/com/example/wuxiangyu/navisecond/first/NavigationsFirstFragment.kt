@@ -1,5 +1,7 @@
 package com.example.wuxiangyu.navisecond.first
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -13,6 +15,7 @@ class NavigationsFirstFragment : BaseFragment() {
     lateinit var tvFirst: TextView
     lateinit var btnGoSubA: Button
     lateinit var btnSecondSubA: Button
+    lateinit var btnDeeplink: Button
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_navigations_first, container, false)
         initView(view)
@@ -24,11 +27,24 @@ class NavigationsFirstFragment : BaseFragment() {
         tvFirst = view.findViewById(R.id.tvFirst)
         btnGoSubA = view.findViewById(R.id.btnGoSubA)
         btnSecondSubA = view.findViewById(R.id.btnSecondSubA)
+        btnDeeplink = view.findViewById(R.id.btnDeeplink)
         btnGoSubA.setOnClickListener{
             navController?.navigate(R.id.action_navigationsFirstFragment_to_navigationsFirstSubAFragment)
         }
         btnSecondSubA.setOnClickListener{
             navController?.navigate(R.id.action_navigationsFirstFragment_to_navigationsSecondSubAFragment)
+        }
+        btnDeeplink.setOnClickListener{
+            //deeplink来跳转
+//            navController?.navigate(R.id.action_navigationsFirstFragment_to_navigationsSecondSubAFragment)
+//            val navDeepLinkBuilder = navController?.createDeepLink()
+            val intent = Intent()
+            intent.data = Uri.parse("seu://seu.com/firstsub")
+            /*
+            这个是操作不了的，因为该deeplink不做当前controller中
+             */
+//            intent.data = Uri.parse("seu://seu.com/secondsub")
+            navController?.onHandleDeepLink(intent)
         }
     }
 }

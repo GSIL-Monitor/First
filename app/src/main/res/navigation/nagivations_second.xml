@@ -14,5 +14,8 @@
     <fragment
         android:id="@+id/navigationsSecondSubAFragment"
         android:name="com.example.wuxiangyu.navisecond.second.NavigationsSecondSubAFragment"
-        android:label="NavigationsSecondSubAFragment" />
+        android:label="NavigationsSecondSubAFragment" >
+        <deepLink
+            app:uri="seu://seu.com/secondsub"/>
+    </fragment>
 </navigation>

@@ -15,6 +15,12 @@
         android:layout_height="50dp"
         android:text="go Second Sub A"
         app:layout_constraintTop_toBottomOf="@id/btnGoSubA"/>
+    <Button
+        android:id="@+id/btnDeeplink"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="deeplink to sub a"
+        app:layout_constraintTop_toBottomOf="@id/btnSecondSubA"/>
     <TextView
         android:id="@+id/tvFirst"
         android:layout_width="match_parent"

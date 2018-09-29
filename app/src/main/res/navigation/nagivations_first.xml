@@ -18,6 +18,10 @@
         android:id="@+id/navigationsFirstSubAFragment"
         android:name="com.example.wuxiangyu.navisecond.first.NavigationsFirstSubAFragment"
         android:label="NavigationsFirstSubAFragment" >
+        <deepLink
+            android:id="@+id/shortDeepLinkSearch"
+            app:uri="seu://seu.com/firstsub" />
+
         <argument
             android:name="myarg"
             android:defaultValue="Android!"/>
