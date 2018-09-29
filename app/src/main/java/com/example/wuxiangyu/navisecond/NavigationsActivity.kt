@@ -83,6 +83,7 @@ class NavigationsActivity : AppCompatActivity() {
             ft.hide(fragment)
         }
         ft.show(navHostFragment)
+//        ft.addToBackStack(null)//会和setprimarynavigation冲突
         ft.commit()
     }
 
