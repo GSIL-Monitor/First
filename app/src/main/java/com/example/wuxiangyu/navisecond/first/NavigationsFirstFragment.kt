@@ -40,6 +40,14 @@ class NavigationsFirstFragment : BaseFragment() {
 //            val navDeepLinkBuilder = navController?.createDeepLink()
             val intent = Intent()
             intent.data = Uri.parse("seu://seu.com/firstsub")
+            val bundle = Bundle()
+
+            val extraBundle = Bundle()
+            extraBundle.putString("myargs", "haha")
+//            intent.putExtra("myargs", "haha")
+            bundle.putBundle("android-support-nav:controller:deepLinkExtras", extraBundle)
+
+            intent.putExtras(bundle)
             /*
             这个是操作不了的，因为该deeplink不做当前controller中
              */

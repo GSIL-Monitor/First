@@ -26,8 +26,10 @@ class NavigationsFirstSubAFragment : BaseFragment() {
             navController?.navigate(R.id.action_navigationsFirstSubAFragment_to_navigationsSecondActivity)
         }
         arguments?.let {
-            val argumentFromNavigationXml = it.getString("myarg")
-            tvFirst.text = argumentFromNavigationXml
+            val argumentFromNavigationXml = it.getString("myargs")
+            if (!argumentFromNavigationXml.isNullOrEmpty()) {
+                tvFirst.text = argumentFromNavigationXml
+            }
         }
 
     }
