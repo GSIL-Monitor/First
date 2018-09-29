@@ -6,18 +6,18 @@
 
     <fragment
         android:id="@+id/firstFragment"
-        android:name="com.example.wuxiangyu.navisecond.NavigationsFirstFragment"
+        android:name="com.example.wuxiangyu.navisecond.first.NavigationsFirstFragment"
         android:label="FirstFragment" >
     </fragment>
     
     <fragment
         android:id="@+id/secondFragment"
-        android:name="com.example.wuxiangyu.navisecond.NavigationsSecondFragment"
+        android:name="com.example.wuxiangyu.navisecond.second.NavigationsSecondFragment"
         android:label="SecondFragment" >
     </fragment>
 
     <fragment
         android:id="@+id/thirdFragment"
-        android:name="com.example.wuxiangyu.navisecond.NavigationsThirdFragment"
+        android:name="com.example.wuxiangyu.navisecond.third.NavigationsThirdFragment"
         android:label="ThirdFragment" />
 </navigation>

@@ -2,12 +2,23 @@ package com.example.wuxiangyu.navisecond
 
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
+import android.support.v4.app.NavUtils
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
+import android.view.MenuItem
+import android.widget.FrameLayout
+import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.example.wuxiangyu.first.R
 
-class NavigationsActivity: AppCompatActivity() {
+class NavigationsActivity : AppCompatActivity() {
+    companion object {
+        const val TAG = "NavigationsActivity"
+    }
+    private lateinit var flContainer: FrameLayout
+    private val navigationUtils = NavigationUtils()
+
     lateinit var bottomNavigation: BottomNavigationView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,16 +27,55 @@ class NavigationsActivity: AppCompatActivity() {
     }
 
     private fun initView() {
+        flContainer = findViewById(R.id.flContainer)
         bottomNavigation = findViewById(R.id.bottomNavigation)
         bottomNavigation.inflateMenu(R.menu.navigations_menu)
 
-        var host: NavHostFragment = supportFragmentManager.findFragmentById(R.id.rootFragment) as NavHostFragment
+//        var host: NavHostFragment = supportFragmentManager.findFragmentById(R.id.rootFragment) as NavHostFragment
 
-        var navController = host.navController
-        var navigationView: BottomNavigationView = findViewById(R.id.bottomNavigation)
+//        var navController = NavController(this)
+//        navController.setGraph(R.navigation.navigations_graph)
+//        var navigationView: BottomNavigationView = findViewById(R.id.bottomNavigation)
+//        navController.navigatorProvider.addNavigator(navController)
+//        NavigationUI.setupWithNavController(navigationView, navController)
 
-        NavigationUI.setupWithNavController(navigationView, navController)
-        //todo bind
-//        NavigationUI.setupWithNavController()
+
+        setBottomListener(bottomNavigation)
+        changeHostFragment(R.id.firstFragment)
     }
+
+    private fun setBottomListener(navigationView: BottomNavigationView) {
+        navigationView.setOnNavigationItemReselectedListener(object : BottomNavigationView.OnNavigationItemReselectedListener {
+            override fun onNavigationItemReselected(item: MenuItem) {
+                //重复点击
+                val itemId = item.itemId
+            }
+
+        })
+
+        navigationView.setOnNavigationItemSelectedListener(object : BottomNavigationView.OnNavigationItemSelectedListener {
+            override fun onNavigationItemSelected(item: MenuItem): Boolean {
+                //切换
+                val itemId = item.itemId
+                changeHostFragment(itemId)
+                return true
+            }
+        })
+    }
+
+    private fun changeHostFragment(itemId: Int) {
+        var navId: Int
+        when (itemId) {
+            R.id.firstFragment -> navId = R.navigation.nagivations_first
+            R.id.secondFragment -> navId = R.navigation.nagivations_second
+            R.id.thirdFragment -> navId = R.navigation.nagivations_third
+            else -> navId = R.navigation.nagivations_default
+        }
+        val navHostFragment = navigationUtils.getNavHostFragment(navId)
+        val ft = supportFragmentManager.beginTransaction()
+        ft.replace(R.id.flContainer, navHostFragment)
+        ft.commit()
+    }
+
+
 }

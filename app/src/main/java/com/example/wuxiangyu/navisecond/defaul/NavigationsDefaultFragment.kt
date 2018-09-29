@@ -1,17 +1,17 @@
-package com.example.wuxiangyu.navisecond
+package com.example.wuxiangyu.navisecond.defaul
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.example.wuxiangyu.first.R
+import com.example.wuxiangyu.navisecond.BaseFragment
 
-class NavigationsSecondFragment : Fragment() {
+class NavigationsDefaultFragment : BaseFragment() {
     lateinit var tvFirst: TextView
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_navigations_seconds, container, false)
+        val view = inflater.inflate(R.layout.fragment_navigations_default, container, false)
         initView(view)
 
         return view
