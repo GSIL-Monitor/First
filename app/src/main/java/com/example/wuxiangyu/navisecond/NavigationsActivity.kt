@@ -73,6 +73,7 @@ class NavigationsActivity : AppCompatActivity() {
         }
         val navHostFragment = navigationUtils.getNavHostFragment(navId)
         val ft = supportFragmentManager.beginTransaction()
+        ft.setPrimaryNavigationFragment(navHostFragment)//控制back回退按钮：app:defaultNavHost="true"
         ft.replace(R.id.flContainer, navHostFragment)
         ft.commit()
     }
