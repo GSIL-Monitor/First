@@ -6,5 +6,13 @@
     <fragment
         android:id="@+id/navigationsSecondFragment"
         android:name="com.example.wuxiangyu.navisecond.second.NavigationsSecondFragment"
-        android:label="NavigationsSecondFragment" />
+        android:label="NavigationsSecondFragment" >
+        <action
+            android:id="@+id/action_navigationsSecondFragment_to_navigationsSecondSubAFragment"
+            app:destination="@id/navigationsSecondSubAFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigationsSecondSubAFragment"
+        android:name="com.example.wuxiangyu.navisecond.second.NavigationsSecondSubAFragment"
+        android:label="NavigationsSecondSubAFragment" />
 </navigation>

@@ -2,6 +2,7 @@ package com.example.wuxiangyu.navisecond
 
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
+import android.support.v4.app.Fragment
 import android.support.v4.app.NavUtils
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
@@ -74,7 +75,14 @@ class NavigationsActivity : AppCompatActivity() {
         val navHostFragment = navigationUtils.getNavHostFragment(navId)
         val ft = supportFragmentManager.beginTransaction()
         ft.setPrimaryNavigationFragment(navHostFragment)//控制back回退按钮：app:defaultNavHost="true"
-        ft.replace(R.id.flContainer, navHostFragment)
+
+        if (!navHostFragment.isAdded) {
+            ft.add(R.id.flContainer, navHostFragment)
+        }
+        for ( fragment : Fragment in supportFragmentManager.fragments) {
+            ft.hide(fragment)
+        }
+        ft.show(navHostFragment)
         ft.commit()
     }
 
