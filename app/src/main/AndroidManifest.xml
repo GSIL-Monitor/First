@@ -27,7 +27,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.wuxiangyu.navi.NavigationSecondActivity"/>
+        <activity android:name="com.example.wuxiangyu.navisecond.NavigationsActivity"/>
     </application>
 
 </manifest>

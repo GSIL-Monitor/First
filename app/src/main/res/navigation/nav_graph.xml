@@ -27,7 +27,7 @@
     </fragment>
     <activity
         android:id="@+id/navigationSecondActivity"
-        android:name="com.example.wuxiangyu.navi.NavigationSecondActivity"
+        android:name="com.example.wuxiangyu.navisecond.NavigationsActivity"
         android:label="NavigationSecondActivity" />
 
     <include app:graph="@navigation/login_graph" />
