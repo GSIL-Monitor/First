@@ -10,9 +10,16 @@
         <action
             android:id="@+id/action_navigationsFirstFragment_to_navigationsFirstSubAFragment"
             app:destination="@id/navigationsFirstSubAFragment" />
+        <action
+            android:id="@+id/action_navigationsFirstFragment_to_navigationsSecondSubAFragment"
+            app:destination="@id/navigationsSecondSubAFragment" />
     </fragment>
     <fragment
         android:id="@+id/navigationsFirstSubAFragment"
         android:name="com.example.wuxiangyu.navisecond.first.NavigationsFirstSubAFragment"
         android:label="NavigationsFirstSubAFragment" />
+    <fragment
+        android:id="@+id/navigationsSecondSubAFragment"
+        android:name="com.example.wuxiangyu.navisecond.second.NavigationsSecondSubAFragment"
+        android:label="NavigationsSecondSubAFragment" />
 </navigation>
