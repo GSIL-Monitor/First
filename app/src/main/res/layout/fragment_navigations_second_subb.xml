@@ -3,15 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btnGoSubB"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:text="GO Second subB"/>
     <TextView
         android:id="@+id/tvFirst"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="second fragment sub a"
+        android:text="second fragment sub b"
         android:gravity="center"/>
 </android.support.constraint.ConstraintLayout>

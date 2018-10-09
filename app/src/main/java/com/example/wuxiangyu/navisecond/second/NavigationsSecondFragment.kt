@@ -24,7 +24,7 @@ class NavigationsSecondFragment : BaseFragment() {
         tvFirst = view.findViewById(R.id.tvFirst)
         btnGoSubA = view.findViewById(R.id.btnGoSubA)
         btnGoSubA.setOnClickListener{
-            navController?.navigate(R.id.action_navigationsSecondFragment_to_navigationsSecondSubAFragment)
+            navController?.navigate(R.id.action_navigationsSecondFragment_to_navigation_second_sub)
         }
     }
 }

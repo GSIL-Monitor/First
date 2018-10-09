@@ -8,14 +8,9 @@
         android:name="com.example.wuxiangyu.navisecond.second.NavigationsSecondFragment"
         android:label="NavigationsSecondFragment" >
         <action
-            android:id="@+id/action_navigationsSecondFragment_to_navigationsSecondSubAFragment"
-            app:destination="@id/navigationsSecondSubAFragment" />
+            android:id="@+id/action_navigationsSecondFragment_to_navigation_second_sub"
+            app:destination="@id/navigations_second_sub" />
     </fragment>
-    <fragment
-        android:id="@+id/navigationsSecondSubAFragment"
-        android:name="com.example.wuxiangyu.navisecond.second.NavigationsSecondSubAFragment"
-        android:label="NavigationsSecondSubAFragment" >
-        <deepLink
-            app:uri="seu://seu.com/secondsub"/>
-    </fragment>
+
+    <include app:graph="@navigation/navigations_second_sub"/>
 </navigation>

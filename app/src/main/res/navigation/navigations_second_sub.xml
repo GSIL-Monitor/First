@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigations_second_sub"
+    app:startDestination="@id/navigationsSecondSubAFragment">
+    <fragment
+        android:id="@+id/navigationsSecondSubAFragment"
+        android:name="com.example.wuxiangyu.navisecond.second.NavigationsSecondSubAFragment"
+        android:label="NavigationsSecondSubAFragment" >
+        <action
+            android:id="@+id/action_navigationsSecondSubAFragment_to_navigationsSecondSubBFragment"
+            app:destination="@id/navigationsSecondSubBFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigationsSecondSubBFragment"
+        android:name="com.example.wuxiangyu.navisecond.second.NavigationsSecondSubBFragment"
+        android:label="NavigationsSecondSubBFragment" />
+</navigation>
