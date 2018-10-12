@@ -24,15 +24,25 @@
 
         </activity>
         <activity android:name="com.example.wuxiangyu.navisecond.NavigationsActivity">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+        <activity android:name="com.example.wuxiangyu.navisecond.NavigationsSecondActivity">
+            
+        </activity>
+        <activity android:name="com.example.wuxiangyu.service.ServiceTestActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.wuxiangyu.navisecond.NavigationsSecondActivity">
-            
-        </activity>
+        <service android:name="com.example.wuxiangyu.service.TestService">
+
+        </service>
     </application>
 
 </manifest>
