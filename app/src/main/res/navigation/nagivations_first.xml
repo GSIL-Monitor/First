@@ -13,6 +13,10 @@
         <action
             android:id="@+id/action_navigationsFirstFragment_to_navigationsSecondSubAFragment"
             app:destination="@id/navigations_second_sub" />
+
+        <deepLink
+            android:id="@+id/shortDeepLinkSearch"
+            app:uri="seu://seu.com/first" />
     </fragment>
     <fragment
         android:id="@+id/navigationsFirstSubAFragment"

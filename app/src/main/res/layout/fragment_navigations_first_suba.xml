@@ -16,4 +16,11 @@
         android:layout_height="50dp"
         android:text="go Second Navigations"
         app:layout_constraintTop_toBottomOf="@id/btnSecondSubA"/>
+    <Button
+        android:id="@+id/btnGoToFirstDeepLink"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="deeplink to first fragment"
+        app:layout_constraintTop_toBottomOf="@id/btnSecondNavigations"
+        />
 </android.support.constraint.ConstraintLayout>
