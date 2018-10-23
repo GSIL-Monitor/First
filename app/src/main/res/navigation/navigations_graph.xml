@@ -20,4 +20,8 @@
         android:id="@+id/thirdFragment"
         android:name="com.example.wuxiangyu.navisecond.third.NavigationsThirdFragment"
         android:label="ThirdFragment" />
+    <fragment
+        android:id="@+id/gankFragment"
+        android:name="com.example.wuxiangyu.gank.GankFragment"
+        android:label="GankFragment" />
 </navigation>

@@ -9,9 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import androidx.navigation.Navigation
 import com.example.wuxiangyu.first.R
-import com.example.wuxiangyu.navisecond.BaseFragment
+import com.example.wuxiangyu.base.BaseFragment
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -29,20 +28,23 @@ private const val ARG_PARAM2 = "param2"
  *
  */
 class StartFragment : BaseFragment() {
+    override fun getLayoutId(): Int {
+        return R.layout.fragment_start
+    }
+
     private lateinit var tvNextFragment: TextView
     private lateinit var btnDeeplink: Button
     private var param1: String? = null
     private var param2: String? = null
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_start, container, false)
+    override fun initView(view: View) {
+
         tvNextFragment = view.findViewById(R.id.tvNextFragment)
         btnDeeplink = view.findViewById(R.id.btnDeeplink)
-                tvNextFragment.setOnClickListener{
-                    //todo
-                    navController?.navigate(R.id.action_startFragment_to_secondFragment, null);
-                }
-        btnDeeplink.setOnClickListener{view ->
+        tvNextFragment.setOnClickListener {
+            //todo
+            navController?.navigate(R.id.action_startFragment_to_secondFragment, null);
+        }
+        btnDeeplink.setOnClickListener { view ->
 
             val intent = Intent(Intent.ACTION_VIEW)
             intent.data = Uri.parse("anote://anote-app.com/playing?track_id=6553075482441553921")
@@ -52,6 +54,5 @@ class StartFragment : BaseFragment() {
 //            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)
         }
-        return view
     }
 }

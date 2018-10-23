@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nagivations_gank"
+    app:startDestination="@id/gankFragment">
+
+    <fragment
+        android:id="@+id/gankFragment"
+        android:name="com.example.wuxiangyu.gank.GankFragment"
+        android:label="GankFragment" >
+    </fragment>
+</navigation>

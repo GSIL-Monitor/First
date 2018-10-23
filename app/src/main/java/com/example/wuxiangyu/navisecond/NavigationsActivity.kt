@@ -70,6 +70,7 @@ class NavigationsActivity : AppCompatActivity() {
             R.id.firstFragment -> R.navigation.nagivations_first
             R.id.secondFragment ->  R.navigation.nagivations_second
             R.id.thirdFragment -> R.navigation.nagivations_third
+            R.id.gankFragment -> R.navigation.nagivations_gank
             else -> R.navigation.nagivations_default
         }
         val navHostFragment = navigationUtils.getNavHostFragment(navId)

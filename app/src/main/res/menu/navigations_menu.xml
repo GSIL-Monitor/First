@@ -12,4 +12,8 @@
         android:id="@id/thirdFragment"
         android:icon="@drawable/ic_android"
         android:title="third" />
+    <item
+        android:id="@id/gankFragment"
+        android:icon="@drawable/ic_android"
+        android:title="gank" />
 </menu>

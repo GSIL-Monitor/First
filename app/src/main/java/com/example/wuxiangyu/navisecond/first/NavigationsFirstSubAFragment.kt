@@ -9,20 +9,17 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import com.example.wuxiangyu.first.R
-import com.example.wuxiangyu.navisecond.BaseFragment
+import com.example.wuxiangyu.base.BaseFragment
 
 class NavigationsFirstSubAFragment : BaseFragment() {
+    override fun getLayoutId(): Int {
+       return R.layout.fragment_navigations_first_suba
+    }
+
     lateinit var tvFirst: TextView
     lateinit var btnSecondNavigations: Button
     lateinit var btnGoToFirstDeepLink: Button
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_navigations_first_suba, container, false)
-        initView(view)
-
-        return view
-    }
-
-    private fun initView(view: View) {
+    override fun initView(view: View) {
         tvFirst = view.findViewById(R.id.tvFirst)
         btnSecondNavigations = view.findViewById(R.id.btnSecondNavigations)
         btnGoToFirstDeepLink = view.findViewById(R.id.btnGoToFirstDeepLink)

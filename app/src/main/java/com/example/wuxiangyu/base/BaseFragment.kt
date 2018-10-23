@@ -1,4 +1,4 @@
-package com.example.wuxiangyu.navisecond
+package com.example.wuxiangyu.base
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -9,17 +9,25 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.example.wuxiangyu.Logger
 
-open class BaseFragment : Fragment() {
+abstract class BaseFragment : Fragment() {
     val TAG = this.javaClass.simpleName ?: "BaseFragment"
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         Logger.i(TAG, "onCreateView")
-        return super.onCreateView(inflater, container, savedInstanceState)
+        val view = inflater.inflate(getLayoutId(), container, false)
+
+        return view
     }
+    abstract fun getLayoutId(): Int
+    open fun initView(root: View) {}
+    open fun initData() {}
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         Logger.i(TAG, "onViewCreated")
         super.onViewCreated(view, savedInstanceState)
+        initView(view)
+        initData()
     }
+
 
     override fun onResume() {
         Logger.i(TAG, "onResume")

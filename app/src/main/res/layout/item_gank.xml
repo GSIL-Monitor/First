@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/colorAccent">
+    <ImageView
+        android:id="@+id/ivAuthor"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:background="#222222"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"/>
+    <TextView
+        android:id="@+id/tvAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="wuxiangyu"
+        android:layout_alignTop="@id/ivAuthor"
+        android:layout_toRightOf="@id/ivAuthor"
+        android:layout_marginLeft="10dp"
+        android:textSize="15dp"
+        android:textColor="@color/colorPrimary"/>
+
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ivAuthor"
+        android:layout_below="@id/tvAuthor"
+        android:layout_marginLeft="10dp"
+        android:textSize="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text="方便的实现（自定义）聊天起泡"/>
+    <TextView
+        android:id="@+id/tvType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ivAuthor"
+        android:layout_alignParentRight="true"
+        android:text="Android"
+        android:layout_marginRight="10dp"/>
+
+</RelativeLayout>
