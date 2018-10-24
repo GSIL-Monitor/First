@@ -3,6 +3,7 @@ package com.example.wuxiangyu.gank.database
 import android.arch.lifecycle.LiveData
 import android.arch.persistence.room.Dao
 import android.arch.persistence.room.Insert
+import android.arch.persistence.room.OnConflictStrategy
 import android.arch.persistence.room.Query
 import com.example.wuxiangyu.gank.GankAndroidItemBean
 
@@ -14,6 +15,6 @@ interface GankAndroidDao {
     @Query("SELECT * FROM gank_android")
     fun getAllGankAndroidWithLiveData(): LiveData<List<GankAndroidItemBean>>
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     fun saveGankAndroid(items: ArrayList<GankAndroidItemBean>)
 }

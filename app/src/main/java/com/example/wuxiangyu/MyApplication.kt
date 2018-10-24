@@ -1,6 +1,7 @@
 package com.example.wuxiangyu
 
 import android.app.Application
+import com.facebook.stetho.Stetho
 
 class MyApplication: Application() {
     companion object {
@@ -10,5 +11,6 @@ class MyApplication: Application() {
     override fun onCreate() {
         instance = this
         super.onCreate()
+        Stetho.initializeWithDefaults(this)
     }
 }
