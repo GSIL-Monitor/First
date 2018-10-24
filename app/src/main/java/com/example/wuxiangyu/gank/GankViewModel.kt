@@ -24,6 +24,7 @@ class GankViewModel: ViewModel() {
 
             override fun onFail(errorString: String) {
                 Logger.e("loadinfo", "error")
+                //todo,怎么操作操作ui？
             }
 
         })
