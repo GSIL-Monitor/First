@@ -14,12 +14,13 @@ abstract class GankDatabase : RoomDatabase() {
         private var instance: GankDatabase? = null
         fun of(context: Context): GankDatabase {
             if (instance == null) {
-                val bulder = Room.databaseBuilder(
+                val builder = Room.databaseBuilder(
                     context,
                     GankDatabase::class.java,
                     context.getDatabasePath("gank").absolutePath
                 )
-                instance = bulder.build()
+                builder.allowMainThreadQueries()
+                instance = builder.build()
             }
             return instance!!
         }
