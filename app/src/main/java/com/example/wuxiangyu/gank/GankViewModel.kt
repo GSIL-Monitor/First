@@ -12,11 +12,12 @@ class GankViewModel: ViewModel() {
     var ganList = MutableLiveData<List<GankAndroidItemBean>>()
 
     fun init() {
-//        ganList =
+        val list = gankRepository.getAndroidGankFromRoom()
+        ganList.postValue(list)
     }
 
     fun loadInfo() {
-        gankRepository.getAndroidGank(object : IResponseCallback<List<GankAndroidItemBean>> {
+        gankRepository.getAndroidGankFromServer(object : IResponseCallback<List<GankAndroidItemBean>> {
             override fun onSuccess(t: List<GankAndroidItemBean>) {
                 ganList.postValue(t)
             }

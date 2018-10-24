@@ -1,17 +1,22 @@
 package com.example.wuxiangyu.gank
 
-class GankAndroidBean: BaseResponse() {
+import android.arch.persistence.room.Entity
+import android.arch.persistence.room.PrimaryKey
+
+class GankAndroidBean : BaseResponse() {
     val results = ArrayList<GankAndroidItemBean>()
 }
 
+@Entity(tableName = "gank_android")
 class GankAndroidItemBean {
-    val _id = ""
-    val createAt = ""
-    val desc = ""
-    val images = ArrayList<String>()
-    val source = ""
-    val type = ""
-    val url = ""
-    val used = false
-    val who = ""
+    @PrimaryKey
+    var _id = ""
+    var createAt = ""
+    var desc = ""
+    //    val images = ArrayList<String>()
+    var source = ""
+    var type = ""
+    var url = ""
+    var used = false
+    var who = ""
 }
