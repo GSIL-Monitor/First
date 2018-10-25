@@ -21,16 +21,27 @@ class GankViewModel: ViewModel() {
 //    }
 
     fun loadInfo() {
-        gankRepository.getAndroidGankFromServer(object : IResponseCallback<List<GankAndroidItemBean>> {
-            override fun onSuccess(t: List<GankAndroidItemBean>) {
-//                ganList.postValue(t)
-            }
+//        gankRepository.getAndroidGankFromServer(object : IResponseCallback<List<GankAndroidItemBean>> {
+//            override fun onSuccess(t: List<GankAndroidItemBean>) {
+////                ganList.postValue(t)
+//            }
+//
+//            override fun onFail(errorString: String) {
+//                Logger.e("loadinfo", "error")
+//                //todo,怎么操作操作ui？
+//            }
+//
+//        })
 
-            override fun onFail(errorString: String) {
-                Logger.e("loadinfo", "error")
-                //todo,怎么操作操作ui？
+        val request = gankRepository.getAndroidGankFromServer2()
+        request.observer(object : RequestObserver<GankAndroidBean> {
+            override fun observer(bean: GankAndroidBean?) {
+                if (bean != null) {
+                    ganList.postValue(bean.results)
+                } else {
+                    ganList.postValue(null)
+                }
             }
-
         })
     }
 }
