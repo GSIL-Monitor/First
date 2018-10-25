@@ -1,5 +1,6 @@
 package com.example.wuxiangyu.gank
 
+import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
 import com.example.wuxiangyu.MyApplication
 import com.example.wuxiangyu.base.IResponseCallback
@@ -16,6 +17,10 @@ class GankRepository {
     fun getAndroidGankFromRoom(): List<GankAndroidItemBean> {
         return db.ganAndroidDao().getAllGankAndroid()
     }
+
+    fun getAndroidGankFromRoomWithLiveData(): LiveData<List<GankAndroidItemBean>> {
+        return db.ganAndroidDao().getAllGankAndroidWithLiveData()
+    }
     fun getAndroidGankFromServer(callback: IResponseCallback<List<GankAndroidItemBean>>) {
         val call = gankService.getAndroidByPage(10)
         call.enqueue(object : Callback<GankAndroidBean> {
@@ -30,6 +35,7 @@ class GankRepository {
 
                 val data = response.body()
                 if (data != null) {
+                    db.ganAndroidDao().saveGankAndroid(data.results)
                     callback?.onSuccess(data.results)
                 }
             }

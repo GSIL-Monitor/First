@@ -47,10 +47,11 @@ class GankFragment : BaseFragment(), GankAdapter.GankItemClickListener {
 
     override fun initData() {
         viewModel = ViewModelProviders.of(this).get(GankViewModel::class.java)
-        viewModel.init()
+        viewModel.initWithLiveData()
+//        viewModel.init()
         swipeLayout.isRefreshing = true
         viewModel.loadInfo()
-        viewModel.ganList.observe(this, Observer {
+        viewModel.ganList?.observe(this, Observer {
             swipeLayout.isRefreshing = false
             if (it != null) {
                 gankAdapter.refresh(it)

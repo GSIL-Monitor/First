@@ -1,5 +1,6 @@
 package com.example.wuxiangyu.gank
 
+import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 import com.example.wuxiangyu.Logger
@@ -9,17 +10,20 @@ class GankViewModel: ViewModel() {
 
     private val gankRepository = GankRepository()
 
-    var ganList = MutableLiveData<List<GankAndroidItemBean>>()
+    var ganList: LiveData<List<GankAndroidItemBean>>? = null
 
     fun init() {
-        val list = gankRepository.getAndroidGankFromRoom()
-        ganList.postValue(list)
+//        val list = gankRepository.getAndroidGankFromRoom()
+//        ganList?.postValue(list)
+    }
+    fun initWithLiveData() {
+        ganList = gankRepository.getAndroidGankFromRoomWithLiveData()
     }
 
     fun loadInfo() {
         gankRepository.getAndroidGankFromServer(object : IResponseCallback<List<GankAndroidItemBean>> {
             override fun onSuccess(t: List<GankAndroidItemBean>) {
-                ganList.postValue(t)
+//                ganList.postValue(t)
             }
 
             override fun onFail(errorString: String) {
