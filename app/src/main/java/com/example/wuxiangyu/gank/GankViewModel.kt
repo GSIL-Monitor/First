@@ -10,15 +10,15 @@ class GankViewModel: ViewModel() {
 
     private val gankRepository = GankRepository()
 
-    var ganList: LiveData<List<GankAndroidItemBean>>? = null
+    var ganList = MutableLiveData<List<GankAndroidItemBean>>()
 
     fun init() {
-//        val list = gankRepository.getAndroidGankFromRoom()
-//        ganList?.postValue(list)
+        val list = gankRepository.getAndroidGankFromRoom()
+        ganList?.postValue(list)
     }
-    fun initWithLiveData() {
-        ganList = gankRepository.getAndroidGankFromRoomWithLiveData()
-    }
+//    fun initWithLiveData() {
+//        ganList = gankRepository.getAndroidGankFromRoomWithLiveData()
+//    }
 
     fun loadInfo() {
         gankRepository.getAndroidGankFromServer(object : IResponseCallback<List<GankAndroidItemBean>> {

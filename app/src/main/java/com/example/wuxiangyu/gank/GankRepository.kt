@@ -18,9 +18,9 @@ class GankRepository {
         return db.ganAndroidDao().getAllGankAndroid()
     }
 
-    fun getAndroidGankFromRoomWithLiveData(): LiveData<List<GankAndroidItemBean>> {
-        return db.ganAndroidDao().getAllGankAndroidWithLiveData()
-    }
+//    fun getAndroidGankFromRoomWithLiveData(): LiveData<List<GankAndroidItemBean>> {
+//        return db.ganAndroidDao().getAllGankAndroidWithLiveData()
+//    }
     fun getAndroidGankFromServer(callback: IResponseCallback<List<GankAndroidItemBean>>) {
         val call = gankService.getAndroidByPage(10)
         call.enqueue(object : Callback<GankAndroidBean> {
