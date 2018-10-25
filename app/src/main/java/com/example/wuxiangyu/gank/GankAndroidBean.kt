@@ -11,7 +11,7 @@ class GankAndroidBean : BaseResponse() {
 class GankAndroidItemBean {
     @PrimaryKey
     var _id = ""
-    var createAt = ""
+    var createdAt = ""
     var desc = ""
     //    val images = ArrayList<String>()
     var source = ""

@@ -9,7 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.example.wuxiangyu.first.R
 
-class GankAdapter(val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class GankAdapter(val context: Context, val onclickListener: GankItemClickListener) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private val list = ArrayList<GankAndroidItemBean>()
     private val inflater = LayoutInflater.from(context)
@@ -19,6 +19,7 @@ class GankAdapter(val context: Context) : RecyclerView.Adapter<RecyclerView.View
     }
 
     fun refresh(addList: List<GankAndroidItemBean>) {
+        list.clear()
         list.addAll(addList)
         notifyDataSetChanged()
     }
@@ -39,6 +40,8 @@ class GankAdapter(val context: Context) : RecyclerView.Adapter<RecyclerView.View
                     holder.tvAuthor.text = who
                     holder.tvDesc.text = desc
                     holder.tvType.text = type
+                    holder.tvTime.text = createdAt
+                    holder.tvAuthor.tag = gankAndroidItemBean
                 }
             }
         }
@@ -46,14 +49,18 @@ class GankAdapter(val context: Context) : RecyclerView.Adapter<RecyclerView.View
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val tvAuthor = view.findViewById<TextView>(R.id.tvAuthor)
+        val tvTime = view.findViewById<TextView>(R.id.tvTime)
         val tvDesc = view.findViewById<TextView>(R.id.tvDesc)
         val tvType = view.findViewById<TextView>(R.id.tvType)
         val ivAuthor = view.findViewById<ImageView>(R.id.ivAuthor)
         init {
             view.setOnClickListener{
-
+                onclickListener.itemClick(tvAuthor.tag as GankAndroidItemBean)
             }
         }
 
+    }
+    interface GankItemClickListener {
+        fun itemClick(bean: GankAndroidItemBean)
     }
 }
