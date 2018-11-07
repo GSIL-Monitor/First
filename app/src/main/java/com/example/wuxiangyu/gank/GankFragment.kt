@@ -12,6 +12,8 @@ import android.support.v4.widget.SwipeRefreshLayout
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.View
+import android.widget.Button
+import com.example.wuxiangyu.MyWebViewActivity
 import com.example.wuxiangyu.base.BaseFragment
 import com.example.wuxiangyu.first.R
 
@@ -43,6 +45,11 @@ class GankFragment : BaseFragment(), GankAdapter.GankItemClickListener {
             }
 
         })
+        root.findViewById<Button>(R.id.btnOpen).setOnClickListener{
+            val intent = Intent()
+            intent.setClass(activity, MyWebViewActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun initData() {

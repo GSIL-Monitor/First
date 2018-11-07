@@ -43,6 +43,9 @@
         <service android:name="com.example.wuxiangyu.service.TestService">
 
         </service>
+        <activity android:name="com.example.wuxiangyu.MyWebViewActivity">
+
+        </activity>
     </application>
 
 </manifest>
