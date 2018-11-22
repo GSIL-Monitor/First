@@ -1,13 +1,9 @@
 package com.example.wuxiangyu.gank
 
 import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProvider
 import android.arch.lifecycle.ViewModelProviders
 import android.content.Intent
 import android.net.Uri
-import android.net.wifi.p2p.WifiP2pGroup
-import android.net.wifi.p2p.WifiP2pManager
-import android.preference.SwitchPreference
 import android.support.v4.widget.SwipeRefreshLayout
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
@@ -15,7 +11,7 @@ import android.view.View
 import android.widget.Button
 import com.example.wuxiangyu.MyWebViewActivity
 import com.example.wuxiangyu.base.BaseFragment
-import com.example.wuxiangyu.first.R
+import com.example.wuxiangyu.haha.R
 
 class GankFragment : BaseFragment(), GankAdapter.GankItemClickListener {
     override fun itemClick(bean: GankAndroidItemBean) {

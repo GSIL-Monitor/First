@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import com.example.wuxiangyu.first.R
+import com.example.wuxiangyu.haha.R
 
 class GankAdapter(val context: Context, val onclickListener: GankItemClickListener) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 

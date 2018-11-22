@@ -1,8 +1,6 @@
 package com.example.wuxiangyu;
 
-import android.content.Intent;
 import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
@@ -13,9 +11,8 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.Toast;
 
-import com.example.wuxiangyu.first.R;
+import com.example.wuxiangyu.haha.R;
 
 public class MyWebViewActivity extends AppCompatActivity {
     WebView webView;

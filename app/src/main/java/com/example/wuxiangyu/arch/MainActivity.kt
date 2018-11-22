@@ -2,8 +2,8 @@ package com.example.wuxiangyu.arch
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import com.example.wuxiangyu.first.MainActivity
-import com.example.wuxiangyu.first.R
+import com.example.wuxiangyu.haha.MainActivity
+import com.example.wuxiangyu.haha.R
 
 class MainActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

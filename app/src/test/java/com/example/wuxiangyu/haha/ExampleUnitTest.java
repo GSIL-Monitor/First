@@ -1,4 +1,4 @@
-package com.example.wuxiangyu.first;
+package com.example.wuxiangyu.haha;
 
 import org.junit.Test;
 

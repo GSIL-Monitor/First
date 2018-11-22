@@ -10,7 +10,7 @@ import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.View
 import android.widget.Button
-import com.example.wuxiangyu.first.R
+import com.example.wuxiangyu.haha.R
 
 
 class ServiceTestActivity : AppCompatActivity(), View.OnClickListener {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.wuxiangyu.first">
+    package="com.example.wuxiangyu.haha">
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:name="com.example.wuxiangyu.MyApplication">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.example.wuxiangyu.haha.MainActivity">
         </activity>
-        <activity android:name=".SecondActivity"/>
-        <activity android:name=".ThirdActivity">
+        <activity android:name="com.example.wuxiangyu.haha.SecondActivity"/>
+        <activity android:name="com.example.wuxiangyu.haha.ThirdActivity">
         </activity>
         <activity android:name="com.example.wuxiangyu.arch.MainActivity">
 

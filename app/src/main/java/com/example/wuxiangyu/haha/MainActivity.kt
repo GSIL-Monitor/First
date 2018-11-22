@@ -1,17 +1,11 @@
-package com.example.wuxiangyu.first
+package com.example.wuxiangyu.haha
 
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.PagerSnapHelper
 import android.support.v7.widget.RecyclerView
-import android.util.Log
-import android.view.View
-import android.view.WindowManager
-import android.view.animation.AnimationUtils
-import android.widget.TextView
 
 class MainActivity : Activity() {
     lateinit var rv: RecyclerView

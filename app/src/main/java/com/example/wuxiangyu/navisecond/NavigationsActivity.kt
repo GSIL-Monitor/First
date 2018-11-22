@@ -3,15 +3,10 @@ package com.example.wuxiangyu.navisecond
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
-import android.support.v4.app.NavUtils
 import android.support.v7.app.AppCompatActivity
-import android.util.Log
 import android.view.MenuItem
 import android.widget.FrameLayout
-import androidx.navigation.NavController
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.NavigationUI
-import com.example.wuxiangyu.first.R
+import com.example.wuxiangyu.haha.R
 
 class NavigationsActivity : AppCompatActivity() {
     companion object {

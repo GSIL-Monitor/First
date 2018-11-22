@@ -16,7 +16,7 @@
         android:text="wdddddddd"
         android:gravity="center"
         android:textSize="40dp"/>
-    <com.example.wuxiangyu.first.LyricView
+    <com.example.wuxiangyu.haha.LyricView
         android:background="#ff0000"
         android:id="@+id/lyricView"
         android:layout_width="match_parent"

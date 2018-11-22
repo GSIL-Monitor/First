@@ -5,7 +5,7 @@ import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
-import com.example.wuxiangyu.first.R
+import com.example.wuxiangyu.haha.R
 
 class NavigationActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
