@@ -13,6 +13,7 @@ import static android.opengl.GLES20.GL_FLOAT;
 import static android.opengl.GLES20.GL_LINES;
 import static android.opengl.GLES20.GL_POINTS;
 import static android.opengl.GLES20.GL_TRIANGLES;
+import static android.opengl.GLES20.GL_TRIANGLE_FAN;
 import static android.opengl.GLES20.glClear;
 import static android.opengl.GLES20.glClearColor;
 import static android.opengl.GLES20.glDrawArrays;
@@ -91,6 +92,25 @@ public class AirHockeyRenderer implements Renderer {
 			4.5f,  2f,
 			4.5f, 12f
 		};
+         */
+
+        /*
+
+        float[] tableVerticesWithTriangles = {
+                0F, 0F,
+                -0.5F, -0.5F,
+                0.5F, -0.5F,
+                0.5F, 0.5F,
+                -0.5F, 0.5F,
+                -0.5F, -0.5F,
+                // Line 1
+                -0.5f, 0f,
+                0.5f, 0f,
+
+                // Mallets
+                0f, -0.25f,
+                0f, 0.25f
+        };
          */
         float[] tableVerticesWithTriangles = {
                 // Triangle 1
@@ -187,6 +207,7 @@ public class AirHockeyRenderer implements Renderer {
 
         // Draw the table.
         glUniform4f(uColorLocation, 1.0f, 1.0f, 1.0f, 1.0f);
+//        glDrawArrays(GL_TRIANGLE_FAN, 0, 6);
         glDrawArrays(GL_TRIANGLES, 0, 6);
 
         // Draw the center dividing line.
