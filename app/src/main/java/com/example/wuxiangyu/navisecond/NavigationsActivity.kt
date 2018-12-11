@@ -1,12 +1,17 @@
 package com.example.wuxiangyu.navisecond
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Message
+import android.os.SystemClock
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import android.widget.FrameLayout
+import com.example.wuxiangyu.Logger
 import com.example.wuxiangyu.haha.R
+import kotlinx.android.synthetic.main.activity_navigations.*
 
 class NavigationsActivity : AppCompatActivity() {
     companion object {
@@ -15,6 +20,11 @@ class NavigationsActivity : AppCompatActivity() {
     private lateinit var flContainer: FrameLayout
     private val navigationUtils = NavigationUtils()
 
+    private var handler = object : Handler() {
+        override fun handleMessage(msg: Message?) {
+
+        }
+    }
     lateinit var bottomNavigation: BottomNavigationView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,6 +48,22 @@ class NavigationsActivity : AppCompatActivity() {
 
         setBottomListener(bottomNavigation)
         changeHostFragment(R.id.firstFragment)
+        btnHandler.setOnClickListener {
+            MainThreadPoster.postRunnableDelay(Runnable {
+                Logger.e(TAG, "haha")
+            }, "haha", 5000)
+        }
+        btnRemove.setOnClickListener {
+            handler.removeCallbacksAndMessages("haha")
+        }
+        btnHandlerAll.setOnClickListener {
+            MainThreadPoster.postRunnableDelay(Runnable {
+                Logger.e(TAG, "haha1")
+            }, "haha1", 5000)
+        }
+        btnRemoveAll.setOnClickListener {
+            MainThreadPoster.removeCallbacksAndMessages(null)
+        }
     }
 
     private fun setBottomListener(navigationView: BottomNavigationView) {

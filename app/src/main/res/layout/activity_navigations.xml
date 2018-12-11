@@ -24,4 +24,27 @@
             <!--app:defaultNavHost="true"-->
             <!--app:navGraph="@navigation/navigations_graph" />-->
     </FrameLayout>
+    <Button
+        android:id="@+id/btnHandler"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="add"/>
+    <Button
+        android:id="@+id/btnRemove"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="remove"
+        app:layout_constraintTop_toBottomOf="@id/btnHandler"/>
+    <Button
+        android:id="@+id/btnHandlerAll"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="add all"
+        app:layout_constraintTop_toBottomOf="@id/btnRemove"/>
+    <Button
+        android:id="@+id/btnRemoveAll"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="remove all"
+        app:layout_constraintTop_toBottomOf="@id/btnHandlerAll"/>
 </android.support.constraint.ConstraintLayout>
