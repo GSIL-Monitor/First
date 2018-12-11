@@ -48,6 +48,9 @@
 
         </activity>
         <activity android:name="com.example.wuxiangyu.media.CameraActivity">
+
+        </activity>
+        <activity android:name="com.example.wuxiangyu.media.opengl.FirstOpenGLProjectActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
