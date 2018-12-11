@@ -6,7 +6,7 @@
  * We make no guarantees that this code is fit for any purpose. 
  * Visit http://www.pragmaticprogrammer.com/titles/kbogla for more book information.
 ***/
-package com.example.wuxiangyu.media.opengl.raw.util;
+package com.example.wuxiangyu.media.opengl.airhockey1.util;
 
 public class LoggerConfig {
     public static final boolean ON = true;

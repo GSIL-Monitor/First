@@ -6,7 +6,7 @@
  * We make no guarantees that this code is fit for any purpose. 
  * Visit http://www.pragmaticprogrammer.com/titles/kbogla for more book information.
 ***/
-package com.example.wuxiangyu.media.opengl.raw.util;
+package com.example.wuxiangyu.media.opengl.airhockey1.util;
 
 import static android.opengl.GLES20.GL_COMPILE_STATUS;
 import static android.opengl.GLES20.GL_FRAGMENT_SHADER;
@@ -30,26 +30,26 @@ import android.util.Log;
 
 public class ShaderHelper {
     private static final String TAG = "ShaderHelper";
-    
+
     /**
      * Loads and compiles a vertex shader, returning the OpenGL object ID.
      */
     public static int compileVertexShader(String shaderCode) {
         return compileShader(GL_VERTEX_SHADER, shaderCode);
     }
-    
+
     /**
      * Loads and compiles a fragment shader, returning the OpenGL object ID.
      */
     public static int compileFragmentShader(String shaderCode) {
         return compileShader(GL_FRAGMENT_SHADER, shaderCode);
     }
-    
+
     /**
      * Compiles a shader, returning the OpenGL object ID.
      */
     private static int compileShader(int type, String shaderCode) {
-        
+
         // Create a new shader object.
         final int shaderObjectId = glCreateShader(type);
 
@@ -60,7 +60,7 @@ public class ShaderHelper {
 
             return 0;
         }
-       
+
         // Pass in the shader source.
         glShaderSource(shaderObjectId, shaderCode);
 
@@ -73,7 +73,7 @@ public class ShaderHelper {
 
         if (LoggerConfig.ON) {
             // Print the shader info log to the Android log output.
-            Log.v(TAG, "Results of compiling source:" + "\n" + shaderCode + "\n:" 
+            Log.v(TAG, "Results of compiling source:" + "\n" + shaderCode + "\n:"
                 + glGetShaderInfoLog(shaderObjectId));
         }
 
@@ -100,12 +100,12 @@ public class ShaderHelper {
 
         // Create a new program object.
         final int programObjectId = glCreateProgram();
-		
+
         if (programObjectId == 0) {
             if (LoggerConfig.ON) {
                 Log.w(TAG, "Could not create new program");
             }
-			
+
             return 0;
         }
 
@@ -123,8 +123,8 @@ public class ShaderHelper {
 
         if (LoggerConfig.ON) {
             // Print the program info log to the Android log output.
-            Log.v(TAG, "Results of linking program:\n" 
-                + glGetProgramInfoLog(programObjectId));			
+            Log.v(TAG, "Results of linking program:\n"
+                + glGetProgramInfoLog(programObjectId));
         }
 
         // Verify the link status.
@@ -146,7 +146,7 @@ public class ShaderHelper {
      */
     public static boolean validateProgram(int programObjectId) {
         glValidateProgram(programObjectId);
-		
+
         final int[] validateStatus = new int[1];
         glGetProgramiv(programObjectId, GL_VALIDATE_STATUS, validateStatus, 0);
         Log.v(TAG, "Results of validating program: " + validateStatus[0]

@@ -6,7 +6,7 @@
  * We make no guarantees that this code is fit for any purpose. 
  * Visit http://www.pragmaticprogrammer.com/titles/kbogla for more book information.
  ***/
-package com.example.wuxiangyu.media.opengl.raw;
+package com.example.wuxiangyu.media.opengl.airhockey1;
 
 import static android.opengl.GLES20.GL_COLOR_BUFFER_BIT;
 import static android.opengl.GLES20.GL_FLOAT;
@@ -35,9 +35,9 @@ import android.content.Context;
 import android.opengl.GLSurfaceView.Renderer;
 
 import com.example.wuxiangyu.haha.R;
-import com.example.wuxiangyu.media.opengl.raw.util.LoggerConfig;
-import com.example.wuxiangyu.media.opengl.raw.util.ShaderHelper;
-import com.example.wuxiangyu.media.opengl.raw.util.TextResourceReader;
+import com.example.wuxiangyu.media.opengl.airhockey1.util.LoggerConfig;
+import com.example.wuxiangyu.media.opengl.airhockey1.util.ShaderHelper;
+import com.example.wuxiangyu.media.opengl.airhockey1.util.TextResourceReader;
 
 public class AirHockeyRenderer implements Renderer {
     private static final String U_COLOR = "u_Color";
