@@ -51,6 +51,9 @@
 
         </activity>
         <activity android:name="com.example.wuxiangyu.media.opengl.FirstOpenGLProjectActivity">
+
+        </activity>
+        <activity android:name="com.example.wuxiangyu.media.opengl.raw.AirHockeyActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
