@@ -57,10 +57,19 @@
 
         </activity>
         <activity android:name="com.example.wuxiangyu.media.opengl.airHockey2.AirHockeyActivity">
+
+        </activity>
+        <activity android:name="com.example.wuxiangyu.screenon.ScreenOnSetActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name="com.example.wuxiangyu.screenon.ScreenOnShowActivity">
+
+        </activity>
+        <activity android:name="com.example.wuxiangyu.media.opengl.airHockey3.AirHockeyActivity">
+
         </activity>
     </application>
 
