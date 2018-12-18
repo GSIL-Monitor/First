@@ -70,6 +70,7 @@ public class ScreenService extends Service {
 //
 //        startForeground(1, notification);
 
+        Logger.Companion.e("ScsreenService", "onStartCommand");
         return START_STICKY;
     }
 
