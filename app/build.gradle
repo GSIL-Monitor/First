@@ -4,6 +4,14 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
+    signingConfigs {
+        release {
+            keyAlias 'ttbach'
+            keyPassword 'ttbach'
+            storeFile file('/Users/wuxiangyu/AndroidStudioProjects/First/ttbach.keystore')
+            storePassword 'ttbach'
+        }
+    }
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.example.wuxiangyu.haha"
@@ -12,6 +20,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.release
     }
     buildTypes {
         release {
@@ -19,54 +28,46 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    productFlavors {
+    }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation deps.support.constraint_layout
     implementation deps.support.app_compat
     implementation deps.kotlin.stdlib
-
-
     // Support libraries
     implementation deps.support.app_compat
     implementation deps.support.v4
     implementation deps.support.design
     implementation deps.support.cardview
-
     // Architecture components
     implementation deps.lifecycle.runtime
     implementation deps.lifecycle.extensions
     annotationProcessor deps.lifecycle.compiler
     implementation deps.room.runtime
     annotationProcessor deps.room.compiler
-
     // Android Testing Support Library's runner and rules
     androidTestImplementation deps.atsl.runner
     androidTestImplementation deps.atsl.rules
     androidTestImplementation deps.room.testing
     androidTestImplementation deps.arch_core.testing
-
     // Espresso UI Testing
     androidTestImplementation deps.espresso.core
     androidTestImplementation deps.espresso.contrib
     androidTestImplementation deps.espresso.intents
-
     // Resolve conflicts between main and test APK:
     androidTestImplementation deps.support.annotations
     androidTestImplementation deps.support.v4
     androidTestImplementation deps.support.app_compat
     androidTestImplementation deps.support.design
     implementation 'android.arch.navigation:navigation-fragment:1.0.0-alpha03'
-    implementation "android.arch.navigation:navigation-runtime:1.0.0-alpha03"
-    implementation "android.arch.navigation:navigation-ui:1.0.0-alpha01"
-
-
+    implementation 'android.arch.navigation:navigation-runtime:1.0.0-alpha03'
+    implementation 'android.arch.navigation:navigation-ui:1.0.0-alpha01'
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
-
     def room_version = "1.1.1"
-
     implementation "android.arch.persistence.room:runtime:$room_version"
     kapt "android.arch.persistence.room:compiler:$room_version"
     implementation "android.arch.persistence.room:rxjava2:$room_version"

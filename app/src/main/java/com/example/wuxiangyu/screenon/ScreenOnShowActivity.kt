@@ -7,9 +7,9 @@ import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.view.Window
 import android.view.WindowManager
 import android.widget.TextView
+import com.example.wuxiangyu.Logger
 
 class ScreenOnShowActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,12 +20,15 @@ class ScreenOnShowActivity : AppCompatActivity() {
         setContentView(tv)
     }
 
+    override fun onNewIntent(intent: Intent?) {
+        super.onNewIntent(intent)
+        Logger.e("ScreenOnShowActivity", "onNewIntent")
+    }
+
     private fun initWindow() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1) {
             setShowWhenLocked(true)
             setTurnScreenOn(true)
-            val keyguardManager = getSystemService(Context.KEYGUARD_SERVICE) as KeyguardManager
-            keyguardManager.requestDismissKeyguard(this, null)
         } else {
             this.window.addFlags(
                 WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD or

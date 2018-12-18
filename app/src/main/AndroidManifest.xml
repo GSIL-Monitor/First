@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.wuxiangyu.haha">
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -44,6 +48,8 @@
         <service android:name="com.example.wuxiangyu.service.TestService">
 
         </service>
+        <service android:name="com.example.wuxiangyu.screenon.ScreenService" />
+
         <activity android:name="com.example.wuxiangyu.MyWebViewActivity">
 
         </activity>
@@ -59,14 +65,18 @@
         <activity android:name="com.example.wuxiangyu.media.opengl.airHockey2.AirHockeyActivity">
 
         </activity>
-        <activity android:name="com.example.wuxiangyu.screenon.ScreenOnSetActivity">
+        <activity android:name="com.example.wuxiangyu.screenon.ScreenOnSetActivity"
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.wuxiangyu.screenon.ScreenOnShowActivity">
-
+        <activity android:name="com.example.wuxiangyu.screenon.ScreenOnShowActivity"
+            android:launchMode="singleTask"
+            android:taskAffinity="com.example.wuxiangyu.haha.lockscreen.ui"
+            android:excludeFromRecents="true"
+            android:noHistory="true">
         </activity>
         <activity android:name="com.example.wuxiangyu.media.opengl.airHockey3.AirHockeyActivity">
 
